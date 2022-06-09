@@ -6,7 +6,8 @@ firsttime_install(){
 echo "if [ $(tty) == "/dev/tty1" ]; then\
 while true; do startx -- -nocursor; echo "Again [$?]..."; done\
 fi\
-DISPLAY=:0 xset dpms 60 0 0" >> ~/.bashrc
+DISPLAY=:0 xset dpms 60 0 0\
+echo 100 | sudo tee /sys/class/backlight/*/brightness" >> ~/.bashrc
 
 # install the service to autostart 
 echo "[Service]\
