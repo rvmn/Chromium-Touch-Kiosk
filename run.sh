@@ -5,9 +5,7 @@ firsttime_install(){
 # install the runner
 echo "if [ $(tty) == "/dev/tty1" ]; then\
 while true; do startx -- -nocursor; echo "Again [$?]..."; done\
-fi\
-DISPLAY=:0 xset dpms 60 0 0\
-echo 100 | sudo tee /sys/class/backlight/*/brightness" >> ~/.bashrc
+fi" >> ~/.bashrc
 
 # install the service to autostart 
 echo "[Service]\
@@ -31,8 +29,11 @@ while true; do\
     killall -9 matchbox-window-manager 2>/dev/null;\
     # Launch window manager without title bar.\
     exec matchbox-window-manager -use_titlebar no -use_cursor no -theme bluebox &\
-    # Run unclutter\
+    # Run unclutter to hide the mouse pointer\
     unclutter &\
+    # Set brightness and timeout\
+    DISPLAY=:0 xset dpms 60 0 0\
+    echo 100 | sudo tee /sys/class/backlight/*/brightness
     # Launch browser.\
     chromium-browser --incognito --kiosk --noerrdialogs --disable-translate --disable-cache --disk-cache-dir=/dev/null --disk-cache-size=1 --app=http://localhost/\
 done;" > ~/.xinitc
