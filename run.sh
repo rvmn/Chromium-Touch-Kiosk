@@ -63,7 +63,7 @@ if [ -f "~/.xinitrc"] || firsttime_install
                 customLayout: {
                         "normal": [
                                 "` 1 2 3 4 5 6 7 8 9 0 - = {del} {b}",
-                                "{tab} q w e r t y u i o p [ ] \\",
+                                "{tab} q w e r t y u i o p [ ]",
                                 "a s d f g h j k l ; \" {enter}",
                                 "{shift} z x c v b n m , . / {shift}",
                                 "{accept} {space} {left} {right} {undo:Undo} {redo:Redo}"
