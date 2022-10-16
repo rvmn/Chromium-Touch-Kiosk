@@ -82,4 +82,4 @@ if [ -f "~/.xinitrc"] || firsttime_install
                         undo: "↺"
                 }
         });
-};' >> ~/fluidd/index.html
+};</script>' >> ~/fluidd/index.html
