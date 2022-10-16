@@ -71,7 +71,7 @@ if [ -f "~/.xinitrc"] || firsttime_install
                         "shift": [
                                 "~ ! @ # $ % ^ & * ( ) _ + {del} {b}",
                                 "{tab} Q W E R T Y U I O P { } |",
-                                "A S D F G H J K L : " {enter}",
+                                "A S D F G H J K L : \" {enter}",
                                 "{shift} Z X C V B N M < > ? {shift}",
                                 "{accept} {space} {left} {right} {undo:Undo} {redo:Redo}"
                         ]
